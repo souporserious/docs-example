@@ -1,3 +1,19 @@
 # Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
+
+```ts
+import { createMDXTSPlugin } from 'mdxts/next'
+
+const withMDXTS = createMDXTSPlugin({
+  sources: {
+    docs: 'docs/**/*.(tsx|mdx)',
+  },
+})
+
+export default withMDXTS({
+  experimental: {
+    appDir: true,
+  },
+})
+```

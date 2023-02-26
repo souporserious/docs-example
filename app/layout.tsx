@@ -17,7 +17,16 @@ export default function RootLayout({
         <aside>
           <Sidebar />
         </aside>
-        <main style={{ padding: '6rem 0' }}>{children}</main>
+        <main
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '6rem 0',
+            gap: '1rem',
+          }}
+        >
+          {children}
+        </main>
       </body>
     </html>
   )
