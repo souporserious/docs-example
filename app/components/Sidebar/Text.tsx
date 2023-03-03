@@ -70,13 +70,13 @@ export const Text = ({
 }
 
 const StyledText = styled.span<StyledTextProps>(
-  ({ $alignment, $lineHeight, $weight, $width, $variant }) => {
+  ({ $alignment, $lineHeight, $weight, $width, $variant = 'body1' }) => {
     const styles = {
       margin: 0,
       textAlign: $alignment,
       width: $width,
       ...(textStyles[$variant] ?? {}),
-    }
+    } as Record<string, any>
 
     if ($weight !== undefined) {
       styles.fontWeight = $weight
