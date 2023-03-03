@@ -1,6 +1,7 @@
 'use client'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { Text } from './Text'
 
 export function SidebarLink({
   pathname,
@@ -20,7 +21,7 @@ export function SidebarLink({
         color: pathname === currentPathname ? 'white' : '#8e9491',
       }}
     >
-      {name}
+      <Text>{name}</Text>
     </Link>
   )
 }

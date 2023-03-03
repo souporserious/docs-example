@@ -1,6 +1,7 @@
 import allDocs from 'mdxts/docs'
 import Link from 'next/link'
 import { SidebarLink } from './SidebarLink'
+import { Text } from './Text'
 
 export function Sidebar() {
   return (
@@ -52,7 +53,7 @@ function renderNavigation(data: any, order: number = 0) {
                   cursor: 'default',
                 }}
               >
-                {item.name}
+                <Text weight={600}>{item.name}</Text>
               </div>
             )}
             {item.children && renderNavigation(item.children, order + 1)}
